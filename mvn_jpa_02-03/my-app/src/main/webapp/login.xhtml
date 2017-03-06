@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:f="http://java.sun.com/jsf/core">
+  <head>
+   <title>
+    Login
+   </title>
+  </head>
+ <h:body>
+   <h1 align="center">Bienvenido</h1>
+   <h:form>
+    <h:panelGrid>
+     <h:outputLabel value="Username: " style="font-weight:bold" />
+     <h:message for="username"/>
+     <h:inputText id="username" value="#{unuser.us.nombre}" required="true" requiredMessage="campo necesario"/>
+     <h:outputLabel value="Password: " style="font-weight:bold" />
+     <h:message for="secret"/>
+     <h:inputSecret required="true" id="secret" value="#{unuser.us.passwd}" requiredMessage="Introduce tu password"/>
+     
+     <h:commandButton value="submit" action="#{unuser.login}"/>
+     <h:commandButton immediate="true" value="cancel" action="#{unuser.cancel}"/>
+    </h:panelGrid>
+   </h:form>
+ </h:body>
+</html>
